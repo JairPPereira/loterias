@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combinações</title>
+  </head>
+  <body>
+    <form action="/" method="post">
+        <label for="quantity">Quantidade de números:</label>
+        <input type="number" id="quantity" name="quantity">
+        <br>
+        <label for="numbers">Números:</label>
+        <input type="text" id="numbers" name="numbers">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br>
+    <p>Quantidade de combinações geradas: {{ combinations_count }}</p>
+    <ul>
+        {% for combination in combinations %}
+        <li>{{ combination }}</li>
+        {% endfor %}
+    </ul>
+  </body>
+</html>
